@@ -5,7 +5,6 @@
  * This program moves servo
 */
 
-
 // variables
 const servoNumber1 = robotbit.Servos.S1
 
