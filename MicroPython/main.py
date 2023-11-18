@@ -8,7 +8,7 @@ from microbit import *
 import math
 
 
-# in order to use servo, taken from Sparkfun.com: https://learn.sparkfun.com/tutorials/getting-started-with-micropython-and-the-sparkfun-inventors-kit-for-microbit/experiment-8-using-a-servo-motor
+# in order to use servo
 class Servo:
     def __init__(self, pin, freq=50, min_us=600, max_us=2400, angle=180):
         self.min_us = min_us
