@@ -8,7 +8,7 @@ from microbit import *
 import math
 
 
-# Servo 
+# in order to use servo, taken from Sparkfun.com: https://learn.sparkfun.com/tutorials/getting-started-with-micropython-and-the-sparkfun-inventors-kit-for-microbit/experiment-8-using-a-servo-motor
 class Servo:
     def __init__(self, pin, freq=50, min_us=600, max_us=2400, angle=180):
         self.min_us = min_us
@@ -42,22 +42,26 @@ display.show(Image.HEART)
 sleep(1000)
 
 while True:
+    # button a is pressed
     if button_a.is_pressed():
         # change servo to 0 degrees
         for angle in range(0, 40, 2):
             Servo(pin0).write_angle(0)
 
+        # shows degree survo is turning to
         display.scroll("0")
 
         display.show(Image.HEART)
         display.clear()
         display.show(Image.HEART_SMALL)
 
+    # button b is pressed
     if button_b.is_pressed():
         # change servo to 180 degrees
         for angle in range(0, 40, 2):
             Servo(pin0).write_angle(180)
 
+        # shows degree survo is turning to
         display.scroll("180")
 
         display.show(Image.HEART)
