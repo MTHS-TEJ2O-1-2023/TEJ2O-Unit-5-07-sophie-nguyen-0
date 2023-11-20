@@ -18,7 +18,7 @@ class Servo:
         self.angle = angle
         self.analog_period = 0
         self.pin = pin
-        analog_period = round((1/self.freq) * 1000)  # hertz to miliseconds
+        analog_period = round((1 / self.freq) * 1000)  # hertz to miliseconds
         self.pin.set_analog_period(analog_period)
 
     def write_us(self, us):
@@ -35,6 +35,7 @@ class Servo:
         total_range = self.max_us - self.min_us
         us = self.min_us + total_range * degrees // self.angle
         self.write_us(us)
+
 
 # setup
 display.clear()
